@@ -4,14 +4,18 @@ import axios from "axios";
 const Request = () => {
   const [request, setRequest] = useState([]);
   const getWithAxios = () => {
-    axios
-      .get(
-        `https://geo.ipify.org/api/v2/country?apiKey=at_QsfJmhZiKJmwXSEGep2avwHQZlHfg&ipAddress=8.8.8.8`
-      )
+    axios.get(
+      `https://geo.ipify.org/api/v2/country?apiKey=at_QsfJmhZiKJmwXSEGep2avwHQZlHfg&ipAddress=8.8.8.8`
+    );
+    console.
+      .log(response.data)
       .then((response) => {
         setRequest(response.data.ip);
         console.log(response.data.ip);
       })
       .catch((err) => console.log(err));
   };
+  return <Request />;
 };
+
+export default Request;
